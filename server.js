@@ -2,13 +2,18 @@
 // require routes, sessions (for authentication)
 const express = require('express');
 const session = require('express-session');
+const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const sequelize = require('./config/configuration');
 // double check this plz
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3001;
+
+const hbs = exphbs.create({});
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 const sess = {
     secret: 'International super spy.....SUPER SPYYYY',
