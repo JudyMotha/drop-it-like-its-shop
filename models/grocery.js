@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+// extend grocery class to the whole model
 class Grocery extends Model {}
 
 Grocery.init(
