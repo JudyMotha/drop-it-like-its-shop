@@ -18,15 +18,19 @@
        <nav>
         {{!-- let nav bar have a "login to  save button" --}}
         <ul>
-          <li></li>
+            {{!-- link this to the login handlebars!!! --}}
+          <li>
+              <a href='/views/'>Login to Save Your List!</a>
+          </li>
         </ul>
-
       </nav>
     </header>
-    <main class="container container-fluid mt-5">
+    
+    {{!--  should make the info go in the center --}}
+    <div class='container'>
       <!-- Render the sub layout -->
       {{{ body }}}
-    </main>
+    </div>
     <footer>
       
     </footer>
