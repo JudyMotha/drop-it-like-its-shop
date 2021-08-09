@@ -1,0 +1,39 @@
+[
+    {
+      "groceryitem" : "Onion",
+      "department": "Produce"
+       },
+    {
+       "groceryitem": "Tomato",
+      "department": "Produce"
+    },
+    {
+       "groceryitem":"Milk",
+       "department":"Dairy"
+    },
+   {
+      "groceryitem":"Cheese",
+     "department": "Dairy"
+    },
+   {
+      "groceryitem": "Celery",
+      "department": "Produce"
+    },
+    {
+       "groceryitem": "Carrots",
+        "department": "Produce"
+    },
+    {
+       "groceryitem":  "Eggs",
+       "department":   "Dairy"
+    },
+   {
+       "groceryitem":"Chicken",
+       "department": "Meat"
+    },
+  {
+       "groceryitem":  "Turkey",
+       "department":   "Meat"
+    }
+   ]
+  
