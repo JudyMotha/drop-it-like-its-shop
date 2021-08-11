@@ -2,20 +2,20 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 // extend grocery class to the whole model
-class Grocery extends Model {}
+class GroceryList extends Model {}
 
-Grocery.init(
+GroceryList.init(
    {
       id: {
          type: DataTypes.INTEGER,
          primaryKey: true,
          autoIncrement: true
       },
- groceryitem: {
+      groceryitem: {
        type: DataTypes.STRING,
        allowNull: false
      },  
-department:{
+      department:{
        type :DataTypes.STRING,
        allowNull: true
 },
@@ -28,4 +28,4 @@ department:{
    }
 );
 
-module.exports = Grocery;
+module.exports = GroceryList;
