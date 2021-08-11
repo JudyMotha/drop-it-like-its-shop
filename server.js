@@ -11,10 +11,13 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+console.log('loading port');
 
 // need middleware 
-app.use(express.urlencoded({extended:true}));
 app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
+
 
 const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
@@ -24,7 +27,7 @@ const sess = {
     secret: 'International super spy.....SUPER SPYYYY',
     cookie: {},
     resave: false,
-    saveUnintialized: true,
+    saveUninitialized: true,
     store: new SequelizeStore({
         db: sequelize
     })
