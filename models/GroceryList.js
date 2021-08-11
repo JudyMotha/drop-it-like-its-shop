@@ -12,13 +12,13 @@ GroceryList.init(
          autoIncrement: true
       },
       groceryitem: {
-       type: DataTypes.STRING,
-       allowNull: false
+         type: DataTypes.STRING,
+         allowNull: false
      },  
       department:{
-       type :DataTypes.STRING,
-       allowNull: true
-},
+         type :DataTypes.STRING,
+         allowNull: true
+      },
    },
    {
       sequelize,
