@@ -10,7 +10,7 @@ GroceryList.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
-      },
+      }
    },
    {
       sequelize,
