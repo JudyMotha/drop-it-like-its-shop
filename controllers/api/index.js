@@ -1,7 +1,6 @@
-// const router = require('express').Router();
-// const homeRoutes = require('./homeRoutes');
-// const userRoutes = require('./userRoutes');
+const router = require('express').Router();
+const homeRoutes = require('./homeRoutes');
+const userRoutes = require('./userRoutes');
 
-// router.use('/', categoryRoutes);
-// router.use('/products', productRoutes);
-// router.use('/tags', tagRoutes);
+router.use('/', homeRoutes);
+router.use('/users', userRoutes );
