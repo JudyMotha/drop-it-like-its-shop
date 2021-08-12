@@ -7,18 +7,10 @@ class GroceryList extends Model {}
 GroceryList.init(
    {
       id: {
-         type: DataTypes.INTEGER,
-         primaryKey: true,
-         autoIncrement: true
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
       },
-      groceryitem: {
-       type: DataTypes.STRING,
-       allowNull: false
-     },  
-      department:{
-       type :DataTypes.STRING,
-       allowNull: true
-},
    },
    {
       sequelize,
