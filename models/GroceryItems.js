@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/configuration');
 
 // extend grocery class to the whole model
 class GroceryItems extends Model {}
