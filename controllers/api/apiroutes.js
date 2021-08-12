@@ -57,3 +57,5 @@ router.delete('/api/homepage/:id', (req,res) => {
     }
   
 });
+
+module.exports = router;
