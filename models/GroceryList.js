@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const sequelize = require('../config/configuration');
 
 // extend grocery class to the whole model
 class GroceryList extends Model {}
@@ -7,18 +7,10 @@ class GroceryList extends Model {}
 GroceryList.init(
    {
       id: {
-         type: DataTypes.INTEGER,
-         primaryKey: true,
-         autoIncrement: true
-      },
-      groceryitem: {
-         type: DataTypes.STRING,
-         allowNull: false
-     },  
-      department:{
-         type :DataTypes.STRING,
-         allowNull: true
-      },
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+      }
    },
    {
       sequelize,
