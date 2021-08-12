@@ -6,7 +6,7 @@ User.belongsTo(GroceryList, {
 });
 
 GroceryList.hasMany(GroceryItems, {
-    foreignKey: 'id'
+    foreignKey: 'list_id'
 });
 
 
