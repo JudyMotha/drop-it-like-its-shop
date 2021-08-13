@@ -1,5 +1,4 @@
 const { GroceryItems } = require('../../models');
-
 const router = require('express').Router();
 
 // this is getting all items by name and Id and sending it out to the page
