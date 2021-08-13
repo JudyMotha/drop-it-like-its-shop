@@ -14,14 +14,14 @@ GroceryItems.init(
         list_id: {
             type: DataTypes.INTEGER
         },
-        groceryitem: {
+        groceryItem: {
             type: DataTypes.STRING,
             allowNull: false
         },  
-        department:{
-            type: DataTypes.STRING,
-            allowNull: true
-        }
+        // department:{
+        //     type: DataTypes.STRING,
+        //     allowNull: true
+        // }
     },
     {
         sequelize,
