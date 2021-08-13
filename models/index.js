@@ -1,5 +1,6 @@
 const User = require('./User');
 const GroceryList = require('./GroceryList');
+const GroceryItems = require('./GroceryItems');
 
 User.belongsTo(GroceryList, {
     foreignKey: 'id',
