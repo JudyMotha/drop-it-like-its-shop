@@ -1,36 +1,34 @@
 //API routes// need to add this in package.json
 const router = require('express').Router();
 const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
+const { GroceryItems } = require('../../models');
+// const { v4: uuidv4 } = require('uuid');
 
 //Reading the jsonfile
-//Replace html front end filename here//db.json is going to be  under the existing db folder
-router.get('/api/homepage', (req,res) => {
-       let groceryData= JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
 
-       res.json(groceryData);
-});
+// router.get('/api/homepage', (req,res) => {
+//        let groceryData= JSON.parse(fs.readFileSync('../../seeds/item.json', 'utf8'));
 
-// POST request OR Create //Replace filename here
-router.post('/api/homepage', (req,res) => {
+//        res.json(groceryData);
+// });
+
+// need to send the data to mysql
+router.post('/api/homepage', async (req,res) => {
     //get  grocery item from end user  (client end)
-    const newGroceryItem = req.body;
+    try {
+        const newGroceryItem = await GroceryItems.create({
+            id: req.body.id,
+            list_id: req.body.list_id,
+            groceryItem: req.body.groceryItem,
+        })
+        res.json(newGroceryItem);
+    } catch(err){
+        console.log(err);
+        res.status(500).json(err);
+    }
+   
 
-    console.log("newly created grocery item");
-
-    // npm package for uniqueid uuid
-    newGroceryItem.id = uuidv4();
-
-    // grab data from the db.json & push the newitem into the database
-    let groceryData = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
-
-    groceryData.push(newGroceryItem);
-
-    // write to db.json
-    fs.writeFileSync('./db/db.json', JSON.stringify(groceryData));
-    console.log('\nSuccesfully added the new groceryitem to db.json!');
-
-    res.json(groceryData);
+    
 });
 
 //Replace filename here 
@@ -40,7 +38,7 @@ router.delete('/api/homepage/:id', (req,res) => {
     
     console.log("this is gonna delete ur grocery item");
 
-    let groceryData = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
+    let groceryData = JSON.parse(fs.readFileSync('../../seeds/item.json', 'utf8'));
 
     // can use filter or for loop
     for(let i=0; i<groceryData.length;i++){
@@ -48,7 +46,7 @@ router.delete('/api/homepage/:id', (req,res) => {
             groceryData.splice(i,1);
 
         // write to db.json
-            fs.writeFileSync('./db/db.json', JSON.stringify(grocerydata));
+            fs.writeFileSync('../../seeds/item.json', JSON.stringify(grocerydata));
             console.log('\nSuccesfully deleted the item!');
 
             res.json(groceryData);
