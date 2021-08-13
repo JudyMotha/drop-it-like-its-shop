@@ -17,3 +17,85 @@ body{
     border-radius: 0;
     background: #f7f7f7
 }
+
+.list-container.only-active .list-item.complete {
+    display: none
+}
+
+.list-container.only-active .list-item:not(.complete) {
+    display: block
+}
+
+.list-container.only-complete .list-item:not(.complete) {
+    display: none
+}
+
+.list-container.only-complete .list-item.complete {
+    display: block
+}
+
+.list-container .list-item.complete span {
+    text-decoration: line-through
+}
+
+.remove-list-item {
+    color: #ccc;
+    visibility: hidden
+}
+
+.remove-list-item:hover {
+    color: #5f5f5f
+}
+
+.list-item:hover .remove-list-item {
+    visibility: visible
+}
+
+div.checker {
+    width: 18px;
+    height: 18px
+}
+
+div.checker input,
+div.checker span {
+    width: 18px;
+    height: 18px
+}
+
+div.checker span {
+    display: -moz-inline-box;
+    display: inline-block;
+    zoom: 1;
+    text-align: center;
+    background-position: 0 -260px;
+}
+
+div.checker, div.checker input, div.checker span {
+    width: 19px;
+    height: 19px;
+}
+
+div.checker, div.radio, div.uploader {
+    position: relative;
+}
+
+div.button, div.button *, div.checker, div.checker *, div.radio, div.radio *, div.selector, div.selector *, div.uploader, div.uploader * {
+    margin: 0;
+    padding: 0;
+}
+
+div.button, div.checker, div.radio, div.selector, div.uploader {
+    display: -moz-inline-box;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+.card {
+    padding: 25px;
+    margin-bottom: 20px;
+    border: initial;
+    background: #fff;
+    border-radius: calc(.15rem - 1px);
+    box-shadow: 0 1px 15px rgba(0,0,0,0.04), 0 1px 6px rgba(0,0,0,0.04);
+}
