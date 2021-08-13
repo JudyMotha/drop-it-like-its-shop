@@ -6,7 +6,7 @@ const { v4: uuidv4 } = require('uuid');
 //Reading the jsonfile
 //Replace html front end filename here//db.json is going to be  under the existing db folder
 router.get('/api/homepage', (req,res) => {
-       let groceryData= JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
+       let groceryData= JSON.parse(fs.readFileSync('./db/item.json', 'utf8'));
 
        res.json(groceryData);
 });

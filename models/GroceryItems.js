@@ -14,7 +14,7 @@ GroceryItems.init(
         list_id: {
             type: DataTypes.INTEGER
         },
-        groceryitem: {
+        groceryItem: {
             type: DataTypes.STRING,
             allowNull: false
         },  
