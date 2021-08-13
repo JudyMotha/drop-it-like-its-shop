@@ -16,7 +16,7 @@ GroceryList.init(
       sequelize,
       freezeTableName: true,
       underscored: true,
-      modelName: 'grocery'
+      modelName: 'GroceryList'
    }
 );
 
