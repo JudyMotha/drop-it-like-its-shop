@@ -17,9 +17,8 @@ router.post('/api/homepage', async (req,res) => {
     //get  grocery item from end user  (client end)
     try {
         const newGroceryItem = await GroceryItems.create({
-            id: req.body.id,
             list_id: req.body.list_id,
-            groceryItem: req.body.groceryItem,
+            item: req.body.item,
         })
         res.json(newGroceryItem);
     } catch(err){
