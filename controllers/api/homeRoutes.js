@@ -1,5 +1,16 @@
 const { GroceryItems } = require('../../models');
 const router = require('express').Router();
+// const loginJS = require('../../public/js/js/login');
+
+
+router.get('/', async (req, res) => {
+    try {
+        res.render('login');
+    } catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+});
 
 // this is getting all items by name and Id and sending it out to the page
 router.get('/', async (req, res) => {
@@ -13,5 +24,8 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/homepage', async (req, res) => {
+    res.render("homepage");
+});
 
 module.exports = router;
