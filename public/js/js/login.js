@@ -23,4 +23,11 @@ const loginForm = async (event) => {
     }
 };
 
+
+const registerUserForm = async (event) => {
+    event.preventDefault();
+
+    const name = 
+}
+
 document.querySelector('.login-form').addEventListener('submit', loginForm);
