@@ -14,7 +14,7 @@ GroceryItems.init(
         list_id: {
             type: DataTypes.INTEGER
         },
-        groceryItem: {
+        item: {
             type: DataTypes.STRING,
             allowNull: false
         },  
@@ -26,8 +26,8 @@ GroceryItems.init(
     {
         sequelize,
         freezeTableName: true,
-        underscored: true,
-        modelName: 'grocery'
+        underscored: false,
+        modelName: 'GroceryItems'
      }
 )
 

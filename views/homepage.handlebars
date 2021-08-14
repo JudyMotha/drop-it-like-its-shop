@@ -1,26 +1,32 @@
-<nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="/">Grocery List</a>
-      <div class="icons">
-        <i class="fas fa-save text-light save-note"></i>
-        <i class="fas fa-plus text-light new-note"></i>
-      </div>
-    </nav>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-4 list-container">
-          <div class="card">
-            <ul class="list-group"></ul>
-          </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card card-white">
+                <div class="card-body">
+                    <form action="javascript:void(0);">
+                        <input type="text" class="form-control add-task" placeholder="Grocery Item">
+                    </form>
+                    <ul class="nav nav-pills list-nav">
+                         <!-- Make login and save links here-->
+                        <!-- <li role="presentation" class="nav-item all-task active"><a href="#" class="nav-link">All Lists</a></li> -->
+                        <li role="presentation" class="nav-item login"><a href="#" class="nav-link">Login</a></li>
+                        <li role="presentation" class="nav-item save-list"><a href="#" class="nav-link">Save & Logout</a></li>
+                    </ul>
+                    <!-- container for the list -->
+                    
+                    <ul class="list-container">
+                        <!--  -->
+                        {{#each item}}
+                        <li class="list-item">
+                            <div class="checker"><span class=""><input type="checkbox"></span></div>
+                            <span>{{ groceryItem }}</span>
+                            <!-- javscript:void(0) stops the page from reloading and JS files can be called on single or double clicks -->
+                            <a href="javascript:void(0);" class="float-right remove-list-item"><i class="icon-close"></i></a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="col-8">
-          <input
-            class="note-title"
-            placeholder="Note Title"
-            maxlength="28"
-            type="text"
-          />
-          <textarea class="note-textarea" placeholder="Note Text"></textarea>
-        </div>
-      </div>
     </div>
-{{!-- <script src="./assets/js/index.js"></script> --}}
+</div>
