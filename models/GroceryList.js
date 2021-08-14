@@ -10,12 +10,19 @@ GroceryList.init(
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true
+      },
+      list_name: {
+      type: DataTypes.STRING,
+      },
+      user_id: {
+      type: DataTypes.INTEGER,
+      foreignKey: true,
       }
    },
    {
       sequelize,
       freezeTableName: true,
-      underscored: true,
+      underscored: false,
       modelName: 'GroceryList'
    }
 );
