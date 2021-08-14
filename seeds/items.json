@@ -1,0 +1,83 @@
+[
+    {
+        "list_id": "1",
+        "item": "apples"
+    },
+    {
+        "list_id": "1",
+        "item": "tomatoes"
+    },
+    {
+        "list_id": "1",
+        "item": "chicken"
+    },
+    {
+        "list_id": "2",
+        "item": "chocolate"
+    },
+    {
+        "list_id": "2",
+        "item": "turkey"
+    },
+    {
+        "list_id": "1",
+        "item": "peas"
+    },
+    {
+        "list_id": "2",
+        "item": "lemons"
+    },
+    {
+        "list_id": "1",
+        "item": "rice"
+    },
+    {
+        "list_id": "2",
+        "item": "cilantro"
+    },
+    {
+        "list_id": "2",
+        "item": "cabbage"
+    },
+    {
+        "list_id": "1",
+        "item": "lime"
+    },
+    {
+        "list_id": "1",
+        "item": "eggplant"
+    },
+    {
+        "list_id": "2",
+        "item": "zucchini"
+    },
+    {
+        "list_id": "2",
+        "item": "coffee"
+    },
+    {
+        "list_id": "1",
+        "item": "cheese"
+    },
+    {
+        "list_id": "2",
+        "item": "pears"
+    },
+    {
+        "list_id": "1",
+        "item": "peaches"
+    },
+    {
+        "list_id": "2",
+        "item": "ketchup"
+    },
+    {
+        "list_id": "2",
+        "item": "oranges"
+    },
+    {
+        "list_id": "1",
+        "item": "kale"
+    }
+
+]
