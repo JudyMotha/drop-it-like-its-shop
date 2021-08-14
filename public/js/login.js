@@ -14,6 +14,8 @@ const loginForm = async (event) => {
             headers: { 'Content-Type': 'application/json'},
         });
 
+        console.log('this is a test');
+
         //if response is successful - take user to homepage
         if (response.ok) {
             document.location.replace('/homepage');

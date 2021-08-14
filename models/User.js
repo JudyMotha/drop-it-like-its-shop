@@ -33,7 +33,7 @@ User.init(
             allowNull: false,
             validate: {
                 //What do we want the length requirement to be? Or do we?
-                length: [10],
+                length: [20],
             },
         },
     },
