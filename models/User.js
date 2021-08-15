@@ -31,10 +31,10 @@ User.init(
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                //What do we want the length requirement to be? Or do we?
-                length: [20],
-            },
+            // validate: {
+
+            //     length: [13],
+            // },
         },
     },
     {

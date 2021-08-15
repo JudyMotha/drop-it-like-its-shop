@@ -3,9 +3,10 @@
 const sequelize = require('../config/configuration');
 const  Grocery = require('../models/GroceryItems');
 const groceryData = require('./items.json');
+
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
-  await Grocery.bulkCreate(groceryData, {
+  await GroceryItems.bulkCreate(item, {
     individualHooks: true,
     returning: true,
   });
