@@ -1,25 +1,49 @@
+
+
 <div class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-5">
+            <div class="card user-saved-lists">
+                <div class="card-body">
+                    <h3>Your Saved Lists</h3>
+                </div>
+                <!--Need to add calls like below list to get list items from user grocery list data -->
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-7">
             <div class="card card-white">
                 <div class="card-body">
+                    <h3>Add Items to your List:</h3>
                     <form action="javascript:void(0);">
-                        <input type="text" class="form-control add-task" placeholder="Grocery Item">
+                        <input type="text" class="form-control add-item" placeholder="Grocery Item">
+                        <button type="button" class="btn btn-outline-primary" type="submit" id="save-item">Save Item</button>
+                        <button type="button" class="btn btn-outline-primary" type="submit" id="save-list">Save List</button>
                     </form>
-                    <ul class="nav nav-pills list-nav">
-                         <!-- Make login and save links here-->
-                        <!-- <li role="presentation" class="nav-item all-task active"><a href="#" class="nav-link">All Lists</a></li> -->
-                        <li role="presentation" class="nav-item login"><a href="/views/login.handlebars" class="nav-link">Login</a></li>
-                        <li role="presentation" class="nav-item save-list"><a href="/views/homepage.handlebars" class="nav-link">Save & Logout</a></li>
-                    </ul>
-                    <!-- container for the list -->
+                     <!-- container for the list -->
+
+                    <span>
+                        <ul>
+                            <li>Apples</li>
+                            <li>Bananas</li>
+                            <li>Milk</li>
+                        </ul>
+                    </span>
                     
                     <ul class="list-container">
                         <!--  -->
                         {{#each item}}
                         <li class="list-item">
-                            <div class="checker"><span class=""><input type="checkbox"></span></div>
-                            <span>{{ groceryItem }}</span>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    <li>{{this}}</li>
+                                </label>
+                            </div>
                             <!-- javscript:void(0) stops the page from reloading and JS files can be called on single or double clicks -->
                             <a href="javascript:void(0);" class="float-right remove-list-item"><i class="icon-close"></i></a>
                         </li>
