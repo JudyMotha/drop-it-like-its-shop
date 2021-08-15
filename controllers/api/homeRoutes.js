@@ -1,6 +1,21 @@
-// const { GroceryItems } = require('../../models');
+const { GroceryItems } = require('../../models');
 const router = require('express').Router();
-// const loginJS = require('../../public/js/js/login');
+const authorize = require('../../utils/auth');
+
+
+router.post('/homepage', authorize, async (req, res) => {
+    try {
+        const newGroceryItem = await GroceryItems.create({
+            ...req.body,
+            item: req.render.item,
+        });
+
+        res.status(200).json(newGroceryItem);
+    } catch (err) {
+        res.status(400).json(err);
+    }
+});
+
 
 
 router.get('/', async (req, res) => {
