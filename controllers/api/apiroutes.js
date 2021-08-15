@@ -22,6 +22,12 @@ router.post('/api/homepage', async (req,res) => {
     
 });
 
+// router.get('/api/groceryitems', async (req,res) => {
+//     try {
+//         const pullItem = await 
+//     }
+// })
+
 //Replace filename here 
 // router.delete('/api/homepage/:id', (req,res) => {
 //     // access data note from client
