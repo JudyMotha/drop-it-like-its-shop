@@ -27,7 +27,7 @@ GroceryItems.init(
         sequelize,
         freezeTableName: true,
         underscored: false,
-        modelName: 'GroceryItems'
+        modelName: 'groceryitems'
      }
 )
 

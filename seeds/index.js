@@ -1,8 +1,9 @@
-// What is this file doing?
-// Fill in here: 
+ 
+// Calls items.json to populate Groceryitems table
 const sequelize = require('../config/configuration');
-const { GroceryItems } = require('../models/');
-const item = require('./items.json');
+const  Grocery = require('../models/GroceryItems');
+const groceryData = require('./items.json');
+
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
   await GroceryItems.bulkCreate(item, {
@@ -12,3 +13,6 @@ const seedDatabase = async () => {
   process.exit(0);
 };
 seedDatabase();
+
+
+
