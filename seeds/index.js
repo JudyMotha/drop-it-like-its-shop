@@ -1,11 +1,11 @@
 // What is this file doing?
 // Fill in here: 
 const sequelize = require('../config/configuration');
-const { Grocery } = require('../models/');
-const item = require('./item.json');
+const { GroceryItems } = require('../models/');
+const item = require('./items.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
-  await Grocery.bulkCreate(groceryData, {
+  await GroceryItems.bulkCreate(item, {
     individualHooks: true,
     returning: true,
   });
