@@ -16,7 +16,7 @@ No installation necessary; just engage on Heroku!
 ## Usage
 Here's the launched [Heroku app](https://afternoon-castle-61955.herokuapp.com/)!
 
-![demo_gif](Assets/demo_gif.gif)
+![demo_gif](./Assets/demo_gif.gif)
 
 ## License
 MIT License
