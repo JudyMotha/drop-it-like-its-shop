@@ -19,36 +19,24 @@
             <div class="card card-white">
                 <div class="card-body">
                     <h3>Add Items to your List:</h3>
-                    <form action="javascript:void(0);">
+                    <form action="/controllers/api/apiroutes.js" method= "POST">
                         <input type="text" class="form-control add-item" placeholder="Grocery Item">
                         <button type="button" class="btn btn-outline-primary" type="submit" id="save-item">Save Item</button>
                         <button type="button" class="btn btn-outline-primary" type="submit" id="save-list">Save List</button>
                     </form>
                      <!-- container for the list -->
-
-                    <span>
-                        <ul>
-                            <li>Apples</li>
-                            <li>Bananas</li>
-                            <li>Milk</li>
-                        </ul>
-                    </span>
-                    
+                <div class="form-check"> 
                     <ul class="list-container">
-                        <!--  -->
-                        {{#each item}}
+                        {{#each items as |item|}}
                         <li class="list-item">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    <li>{{this}}</li>
-                                </label>
-                            </div>
-                            <!-- javscript:void(0) stops the page from reloading and JS files can be called on single or double clicks -->
+                            {{{item.list_id}}}: {{{item.item}}}
+                            
+                        <!-- javscript:void(0) stops the page from reloading and JS files can be called on single or double clicks -->
                             <a href="javascript:void(0);" class="float-right remove-list-item"><i class="icon-close"></i></a>
                         </li>
                         {{/each}}
                     </ul>
+                </div>
                 </div>
             </div>
         </div>

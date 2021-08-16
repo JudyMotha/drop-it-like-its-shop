@@ -1,11 +1,11 @@
 //API routes// need to add this in package.json
 const router = require('express').Router();
-// const fs = require('fs');
+const fs = require('fs');
 const { GroceryItems } = require('../../models');
 
 
 //CREATE a grocery item
-router.post('/', async (req, res) => {
+router.post('/api/groceryitems', async (req, res) => {
     try {
         const groceryData = await GroceryItems.create({
             item: req.body.item,
@@ -34,22 +34,19 @@ router.get('/', async (req, res) => {
 });
 
 // // need to send the data to mysql
-// router.post('/api/homepage', async (req,res) => {
-//     //get  grocery item from end user  (client end)
-//     try {
-//         const newGroceryItem = await GroceryItems.create({
-//             list_id: req.body.list_id,
-//             item: req.body.item,
-//         })
-//         res.json(newGroceryItem);
-//     } catch(err){
-//         console.log(err);
-//         res.status(500).json(err);
-//     }
-   
-
-    
-// });
+router.post('/api/homepage', async (req,res) => {
+    //get  grocery item from end user  (client end)
+    try {
+        const newGroceryItem = await GroceryItems.create({
+            list_id: req.body.list_id,
+            item: req.body.item,
+        })
+        res.json(newGroceryItem);
+    } catch(err){
+        console.log(err);
+        res.status(500).json(err);
+    }   
+});
 
 // router.get('/api/groceryitems', async (req,res) => {
 //     try {
