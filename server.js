@@ -6,6 +6,7 @@ const exphbs = require('express-handlebars');
 console.log('loading routes');
 const routes = require('./controllers');
 const sequelize = require('./config/configuration');
+const path = require('path');
 // double check this plz
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -16,6 +17,7 @@ console.log('loading port');
 // need middleware 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+app.use(express.static(path.join(__dirname, 'public')));
 
 const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
