@@ -4,31 +4,37 @@
     <div class="row">
         <div class="col-md-5">
             <div class="card user-saved-lists">
-                <div class="card-body">
+                <div class="card-body bg-success p-2 text-dark bg-opacity-10">
                     <h3>Your Saved Lists</h3>
                 </div>
                 <!--Need to add calls like below list to get list items from user grocery list data -->
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
+                <ul class="list-group list-group-flush bg-success p-2 text-dark bg-opacity-10">
+                    <li class="list-group-item bg-success p-2 text-dark bg-opacity-10">Kroger</li>
+                        <button type="button" class="btn d-inline p-2 btn-outline-secondary btn-sm">View List</button>
+                        <button type="button" class="btn d-inline p-2 btn-outline-secondary btn-sm">Delete List</button>
+                    <li class="list-group-item bg-success p-2 text-dark bg-opacity-10">Target</li>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">View List</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">Delete List</button>
+                    <li class="list-group-item bg-success p-2 text-dark bg-opacity-10">Lowes</li>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">View List</button>
+                        <button type="button" class="btn btn-outline-secondary btn-sm">Delete List</button>
                 </ul>
             </div>
         </div>
         <div class="col-md-7">
             <div class="card card-white">
-                <div class="card-body">
+                <div class="card-body  bg-success p-2 text-dark bg-opacity-10">
                     <h3>Add Items to your List:</h3>
                     <form action="/controllers/api/apiroutes.js" method= "POST">
                         <input type="text" class="form-control add-item" placeholder="Grocery Item">
-                        <button type="button" class="btn btn-outline-primary" type="submit" id="save-item">Save Item</button>
-                        <button type="button" class="btn btn-outline-primary" type="submit" id="save-list">Save List</button>
+                        <button type="button" class="btn btn-outline-secondary" type="submit" id="save-item">Save Item</button>
+                        <button type="button" class="btn btn-outline-secondary" type="submit" id="save-list">Save List</button>
                     </form>
                      <!-- container for the list -->
                 <div class="form-check"> 
-                    <ul class="list-container">
+                    <ul class="list-container grocery-items">
                         {{#each items as |item|}}
-                        <li class="list-item">
+                        <li class="list-item bg-success p-2 text-dark bg-opacity-10">
                             {{{item.list_id}}}: {{{item.item}}}
                             
                         <!-- javscript:void(0) stops the page from reloading and JS files can be called on single or double clicks -->
