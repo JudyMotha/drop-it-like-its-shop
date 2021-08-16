@@ -10,11 +10,11 @@
 </head>
 
 <body>
+  <div class="bg-success p-2 text-dark bg-opacity-25">
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        Drop It Like It's Shop! 🛍️
-      </h1>
+      <h1 class="text-center">Drop It Like It's Shop!</h1>
+      <h2 class="text-center">Write. Save. Remember.</h2>
     
     </header>
     
@@ -29,10 +29,11 @@
     </footer>
   </div>
 
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
+      <!-- Render script for logged in users only -->
+      {{#if logged_in}}
+      <script src="/js/logout.js"></script>
+      {{/if}}
+  </div>
 </body>
 
 </html>

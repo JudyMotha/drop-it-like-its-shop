@@ -1,6 +1,7 @@
 body{
     margin-top:20px;
-    background: #1f9715;
+    background-image: url("proj_2_background.jpg");
+    background-color: green;
 }
 
 .list-nav {
@@ -98,4 +99,8 @@ div.button, div.checker, div.radio, div.selector, div.uploader {
     background: #fff;
     border-radius: calc(.15rem - 1px);
     box-shadow: 0 1px 15px rgba(0,0,0,0.04), 0 1px 6px rgba(0,0,0,0.04);
+}
+
+.grocery-items {
+    list-style-type: none;
 }
