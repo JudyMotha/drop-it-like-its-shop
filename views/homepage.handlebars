@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-7">
             <div class="card card-white">
-                <div class="card-body  bg-success p-2 text-dark bg-opacity-10">
+                <div class="card-body bg-success p-2 text-dark bg-opacity-10">
                     <h3>Add Items to your List:</h3>
                     <form action="/controllers/api/apiroutes.js" method= "POST">
                         <input type="text" class="form-control add-item" placeholder="Grocery Item">
@@ -35,7 +35,7 @@
                     <ul class="list-container grocery-items">
                         {{#each items as |item|}}
                         <li class="list-item bg-success p-2 text-dark bg-opacity-10">
-                            {{{item.list_id}}}: {{{item.item}}}
+                            {{{item.item}}}
                             
                         <!-- javscript:void(0) stops the page from reloading and JS files can be called on single or double clicks -->
                             <a href="javascript:void(0);" class="float-right remove-list-item"><i class="icon-close"></i></a>
