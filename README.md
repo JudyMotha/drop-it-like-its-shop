@@ -14,7 +14,7 @@ Have you ever written down a grocery list on a piece of paper, only to lose it m
 No installation necessary; just engage on Heroku!
 
 ## Usage
-Here's the launched [Heroku app] https://afternoon-castle-61955.herokuapp.com/
+Here's the launched [Heroku app] https://salty-wave-82361.herokuapp.com/
 
 ![demo_gif](./Assets/demo_gif.gif)
 
